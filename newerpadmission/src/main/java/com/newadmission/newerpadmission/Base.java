@@ -15,14 +15,14 @@ public class Base {
 	
 	@Test
 	public void Login() throws InterruptedException {
-		  System.setProperty("webdriver.chrome.driver","D:\\SEL\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver","F:\\SELENIUM\\chromedriver.exe");
 		  ChromeDriver driver = new ChromeDriver();	 
-		  driver.get("http://qcerp.franciscansolutions.in/Secure/default.aspx");
+		  driver.get("http://qaerp.franciscanecare.net/Secure/");
 		  driver.findElement(By.id("txtUserName")).sendKeys("admin");
-		  driver.findElement(By.id("txtPassword")).sendKeys("admin@fspl");
+		  driver.findElement(By.id("txtPassword")).sendKeys("Admin#franciscan");
 		  driver.findElement(By.id("btnLogin")).click();
 		  
-		  			String Parentwindow=driver.getWindowHandle();
+		  String Parentwindow=driver.getWindowHandle();
 		  System.out.println(Parentwindow);
 		  driver.findElement(By.xpath("//*[@id=\"form1\"]/div[4]/div/div/div[1]/div/div[2]/div[1]/div[4]/a")).click();
 		  
